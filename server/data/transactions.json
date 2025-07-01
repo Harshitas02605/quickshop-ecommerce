@@ -1,0 +1,37 @@
+[
+  {
+    "id": "c639cde5-5847-4da9-adcc-1e68c605fbb8",
+    "paymentIntentId": "pi_3Rg1902MN4BHZQF71ZdEvUfg",
+    "orderId": "7f9125a2-0329-40f5-979d-465fb5ef4aab",
+    "customerEmail": "rajc6103@gmail.com",
+    "amount": 499.98,
+    "currency": "usd",
+    "status": "completed",
+    "cartItems": [
+      {
+        "productId": "2",
+        "title": "Smart Watch Pro",
+        "price": 299.99,
+        "imageURL": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=400&fit=crop",
+        "quantity": 1
+      },
+      {
+        "productId": "1",
+        "title": "Premium Wireless Headphones",
+        "price": 199.99,
+        "imageURL": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=400&fit=crop",
+        "quantity": 1
+      }
+    ],
+    "shippingAddress": {
+      "name": "xxx",
+      "address": "yyy",
+      "city": "zzz",
+      "state": "aaa",
+      "postalCode": "124234",
+      "country": "US"
+    },
+    "createdAt": "2025-07-01T10:11:22.512Z",
+    "stripeChargeId": null
+  }
+]
