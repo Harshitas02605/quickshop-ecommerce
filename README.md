@@ -265,6 +265,34 @@ Configure additional payment methods in the Stripe dashboard.
 2. Deploy the `build` folder
 3. Configure environment variables
 
+## 🖼 Screenshots
+
+| Home | Cart | Checkout |
+|------|------|----------|
+| ![Home](assets/home.png) | ![Cart](assets/cart.png) | ![Checkout](assets/checkout.png) |
+
+> Place your own screenshots in the `assets/` folder with the same filenames.
+
+### Netlify + Render (Full-stack Deployment)
+
+1. **Backend (Render)**
+   1. Sign in to Render and create a **Web Service**.
+   2. Select this repository and set the root directory to `server`.
+   3. Build command: `npm install`
+   4. Start command: `npm start`
+   5. Add the same environment variables from your local `.env`.
+   6. Deploy – Render will provide a backend URL, e.g. `https://quickshop-api.onrender.com`.
+2. **Frontend (Netlify)**
+   1. Sign in to Netlify → **New site from Git** → choose this repo.
+   2. Build command: `cd client && npm run build`
+   3. Publish directory: `client/build`
+   4. Add env var `REACT_APP_API_URL` with the Render backend URL followed by `/api`.
+   5. Deploy – Netlify gives you a public site URL, e.g. `https://quickshop.netlify.app`.
+3. **Update CORS & CLIENT_URL**
+   • Ensure `CLIENT_URL` in the Render backend env matches the Netlify URL so CORS works.
+
+---
+
 ## 📞 Support
 
 If you encounter any issues:
