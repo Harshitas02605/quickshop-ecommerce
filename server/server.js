@@ -3,7 +3,16 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const helmet = require('helmet');
 const rateLimit = require('express-rate-limit');
-require('dotenv-safe').config(); // Requires all .env variables to be set
+const path = require('path');
+const dotenvSafe = require('dotenv-safe');
+
+// Determine which env file to load
+const envFile = process.env.NODE_ENV === 'production' ? '.env.production' : '.env';
+
+dotenvSafe.config({
+  path: path.join(__dirname, envFile),
+  example: path.join(__dirname, '.env.example')
+}); // Requires all .env variables to be set
 
 const productsRoutes = require('./routes/products');
 const cartRoutes = require('./routes/cart');

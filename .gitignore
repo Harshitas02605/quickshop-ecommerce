@@ -9,3 +9,4 @@ client/.env
 # Build output
 client/build/
 !server/.env.example
+!server/.env.production
