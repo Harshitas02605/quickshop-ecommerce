@@ -6,13 +6,12 @@ const rateLimit = require('express-rate-limit');
 const path = require('path');
 const dotenvSafe = require('dotenv-safe');
 
-// Determine which env file to load
-const envFile = process.env.NODE_ENV === 'production' ? '.env.production' : '.env';
-
-dotenvSafe.config({
-  path: path.join(__dirname, envFile),
-  example: path.join(__dirname, '.env.example')
-}); // Requires all .env variables to be set
+if (process.env.NODE_ENV !== 'production') {
+  dotenvSafe.config({
+    path: path.join(__dirname, '.env'),
+    example: path.join(__dirname, '.env.example')
+  });
+} // Load env vars only in non-production
 
 const productsRoutes = require('./routes/products');
 const cartRoutes = require('./routes/cart');
